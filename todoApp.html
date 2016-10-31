@@ -7,25 +7,24 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style media="screen">
-    .todo-card{
-    min-height: 50px;
-    padding:10px !important;
-    }
+        .todo-card {
+            min-height: 50px;
+            padding: 10px !important;
+        }
 
-    .todo-list-item{
-      color:black;
-    }
+        .todo-list-item {
+            color: black;
+        }
 
-    #todoList .align-card-title {
-        margin-left: -25px !important;
-        margin-top: -13px !important;
-    }
+        #todoList .align-card-title {
+            margin-left: -25px !important;
+            margin-top: -13px !important;
+        }
 
-    #todoList .TodoAddButton{
-      margin-top: -2px;
-      margin-left: 50px;
-    }
-
+        #todoList .TodoAddButton {
+            margin-top: -2px;
+            margin-left: 50px;
+        }
     </style>
 </head>
 
@@ -71,23 +70,26 @@
     </div>
 
     <template id="todoCard">
-          <div class="card-panel todo-card white">
-              <div class="col m9">
-                  <input type="checkbox" :id="index" v-on:click="" />
-                  <label :for="index"><span class="todo-list-item">{{todoData.text}}
+        <div class="card-panel todo-card white">
+            <div class="col m9">
+                <input type="checkbox" :id="index" v-on:click="" />
+                <label :for="index"><span class="todo-list-item">{{todoData.text}}
                   </span></label>
-              </div>
-              <div class="col m2">
-                  <span class="chip">{{todoData.type}}</span>
-              </div>
-              <div class="col m1">
+            </div>
+            <div class="col m2">
+                <span class="chip">{{todoData.type}}</span>
+            </div>
+            <div class="col m1">
                 <a href="#" v-on:click="removeTodo()"><i class="material-icons">clear</i></a>
-              </div>
-          </div>
+            </div>
+        </div>
     </template>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script type="text/javascript" src="vue.js"></script>
     <script type="text/javascript" src="app.js"></script>
+
 </body>
 
 </html>

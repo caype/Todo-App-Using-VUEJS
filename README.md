@@ -10,6 +10,6 @@ A Todo List app build using [Vuejs](https://vuejs.org) and styled using [Materia
 
 ## Future Plan :
 
-- Reset Inputs after adding New Todo
+- ~~ Reset Inputs after adding New Todo ~~
 - strike Text on checking a list Item.
 - Sort Todo's by read,unread and Tags.
