@@ -37,7 +37,7 @@ var todoVM = new Vue({
         Materialize.toast('Oops ! there was an error saving your todo. Please try again.', 4000);
       }else{
         if (localStorage.getItem('todoList') == undefined || localStorage.getItem('todoList') == null || localStorage.getItem('todoList')=="[]") {
-        Materialize.toast('Nothing to do. Add new Items to work!',4000);
+        Materialize.toast('YAY! Nothing to do..',4000);
         }else{
          this.getTodosFromLocalStorage();
         }
@@ -54,7 +54,7 @@ var todoVM = new Vue({
           this.getTodosFromLocalStorage();
         }else{
           var existingTodoArray = JSON.parse(localStorage.getItem('todoList'));
-          existingTodoArray.unshift({text:this.enteredText,type:this.enteredType});
+          existingTodoArray.unshift({text:this.enteredText,type:this.enteredType==''?"TODO":this.enteredType});
           localStorage.setItem('todoList',JSON.stringify(existingTodoArray));
           this.todoArray = JSON.parse(localStorage.getItem('todoList'));
           this.resetFields();
