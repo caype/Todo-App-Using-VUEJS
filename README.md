@@ -2,6 +2,10 @@
 
 A Todo List app build using [Vuejs](https://vuejs.org) and styled using [Materializecss](http://materializecss.com)
 
+## Preview
+
+![TodoApp Preview](/screenshots/preview.png?raw=true "TodoApp Preview")
+
 ## Features :
 
 - Add new Todo-Items with Tags.
