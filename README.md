@@ -2,7 +2,7 @@
 
 A Todo List app build using [Vuejs](https://vuejs.org) and styled using [Materializecss](http://materializecss.com)
 
-## Preview
+## Screenshot
 
 ![TodoApp Preview](/screenshots/preview.png?raw=true "TodoApp Preview")
 
@@ -13,6 +13,6 @@ A Todo List app build using [Vuejs](https://vuejs.org) and styled using [Materia
 - Sort Todo Items by Tags
 - Persistent Data with Local Storage.
 
-## Preview :
+## Live Preview :
 
 [TodoApp Preview](https://caype.github.io/TodoListVue/)
