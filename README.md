@@ -10,6 +10,6 @@ A Todo List app build using [Vuejs](https://vuejs.org) and styled using [Materia
 
 ## Future Plan :
 
-- Sort Todo's by read,unread and Tags.
+- ~~Sort Todo's by read,unread and Tags.~~
 - ~~strike Text on checking a list Item.~~
 - ~~Reset Inputs after adding New Todo~~

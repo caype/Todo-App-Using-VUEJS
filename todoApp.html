@@ -59,6 +59,16 @@
                                             <i class="material-icons">add</i></a>
                                     </div>
                                 </div>
+                                <div class="row" v-if="selectedFilter!=''">
+                                  <div class="col m11 left">
+                                    <div class="chip">
+                                      {{selectedFilter}}
+                                    </div>
+                                  </div>
+                                  <div class="col m1 right">
+                                    <a class="btn-floating btn-large waves-effect waves-light" v-on:click="resetFilters()"><i class="material-icons">clear_all</i></a>
+                                  </div>
+                                </div>
                                 <ul>
                                     <li v-for="(todoObj,index) in todoArray">
                                         <todo :todo-Data="todoObj" :index="index"></todo>
@@ -76,12 +86,12 @@
         <div class="card-panel todo-card white">
           <span style="display:none">{{todoData.id}}</span>
             <div class="col m9">
-                <input type="checkbox" v-bind:checked="isDone()" :id="index" v-on:click="markDone()" />
+                <input type="checkbox" v-bind:disabled="isDone()" v-bind:checked="isDone()" :id="index" v-on:click="markDone()" />
                 <label :for="index"><span v-bind:class="{strikeTodo:isDone()}" class="todo-list-item">{{todoData.text}}
                   </span></label>
             </div>
             <div class="col m2">
-                <span class="chip">{{todoData.type}}</span>
+                <a v-on:click="getTypeTodos()" class="chip">{{todoData.type}}</a>
             </div>
             <div class="col m1">
                 <a href="#" v-on:click="removeTodo()"><i class="material-icons">clear</i></a>

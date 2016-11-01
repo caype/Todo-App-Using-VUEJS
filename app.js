@@ -3,10 +3,21 @@ Vue.component('todo',{
   props:['todo-Data','index'],
   data:function(){
     return{
-
     }
   },
   methods:{
+    getTypeTodos:function(){
+      console.log(this.todoData.type);
+      var FromStorage = this.$parent.$data.todoArray;
+      var tempData = this.todoData;
+      var todoFiltered = FromStorage.filter(function(val){
+          if(tempData!=undefined || tempData != null){
+            return val.type==tempData.type
+          }
+        });
+        this.$parent.$data.todoArray = todoFiltered;
+        this.$parent.$data.selectedFilter = this.todoData.type;
+    },
     isDone:function(){
       return this.todoData.isDone;
     },
@@ -53,6 +64,10 @@ var todoVM = new Vue({
     this.getTodosList();
   	},
   methods:{
+    resetFilters:function(){
+      this.todoArray = JSON.parse(localStorage.getItem('todoList'));
+      this.selectedFilter='';
+    },
     resetFields:function(){
         this.enteredText='';this.enteredType='';
     },
@@ -93,6 +108,7 @@ var todoVM = new Vue({
   data:{
     todoArray:[],
     enteredText:'',
-    enteredType:''
+    enteredType:'',
+    selectedFilter:''
   }
 });
