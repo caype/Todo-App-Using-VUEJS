@@ -6,10 +6,9 @@ A Todo List app build using [Vuejs](https://vuejs.org) and styled using [Materia
 
 - Add new Todo-Items with Tags.
 - Delete new Todo-Items.
+- Sort Todo Items by Tags
 - Persistent Data with Local Storage.
 
-## Future Plan :
+## Preview :
 
-- ~~Sort Todo's by read,unread and Tags.~~
-- ~~strike Text on checking a list Item.~~
-- ~~Reset Inputs after adding New Todo~~
+[TodoApp Preview](https://caype.github.io/TodoListVue/)
