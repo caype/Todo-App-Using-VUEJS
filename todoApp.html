@@ -11,7 +11,9 @@
             min-height: 50px;
             padding: 10px !important;
         }
-        
+        .strikeTodo{
+              text-decoration: line-through;
+        }
         .todo-list-item {
             color: black;
         }
@@ -26,6 +28,7 @@
             margin-left: 50px;
         }
     </style>
+
 </head>
 
 <body>
@@ -71,9 +74,10 @@
 
     <template id="todoCard">
         <div class="card-panel todo-card white">
+          <span style="display:none">{{todoData.id}}</span>
             <div class="col m9">
-                <input type="checkbox" :id="index" v-on:click="" />
-                <label :for="index"><span class="todo-list-item">{{todoData.text}}
+                <input type="checkbox" v-bind:checked="isDone()" :id="index" v-on:click="markDone()" />
+                <label :for="index"><span v-bind:class="{strikeTodo:isDone()}" class="todo-list-item">{{todoData.text}}
                   </span></label>
             </div>
             <div class="col m2">
